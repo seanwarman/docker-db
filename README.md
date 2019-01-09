@@ -34,7 +34,11 @@ fancy UI purposes that will be injected into the wrapper files in
 
 `project/controller` php scripts to interact with the db and send back 
 whatever data we need. This will probably mirror the public folder but 
-will also most likely have some extra scripts in it as well.
+will also most likely have some extra scripts in it as well. This 
+folder could contain a backend framework like Symfony in future,
+although it's probably better practice to have a seperate container for
+that. I want to avoid using ajax requests to connect the front and
+backend for the moment.
 
 `project/public` is now what html/ used to be, a folder of views, 
 formatted in .php but rendered as html. These are fundamentally 
