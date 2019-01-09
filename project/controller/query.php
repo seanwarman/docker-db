@@ -17,11 +17,11 @@ if(!$result = $db->query($sql)) {
   die('There was an error :( [' . $db->error . ']');
 }
 
-// while($row = $result->fetch_assoc()) {
-//   echo $row['charone'], ' ', $row['number'], ' ', $row['date'], ' ', $row['text'] . '<br />';
-// }
+while($row = $result->fetch_assoc()) {
+  echo $row['charone'], ' ', $row['number'], ' ', $row['date'], ' ', $row['text'] . '<br />';
+}
 
-$table = $result->fetch_all();
+// $table = $result->fetch_all();
 
-$table = json_encode($table);
+// $table = json_encode($table);
 ?>

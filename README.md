@@ -1,3 +1,56 @@
+# Changes
+
+I've changed this project to have the follwing structure...
+
+```
+/docker-db/
+├── apache
+│   ├── Dockerfile
+│   └── demo.apache.conf
+├── docker-compose.yml
+├── php
+│   └── Dockerfile
+└── project
+    └── components
+    └── controller
+    └── public
+    └── styles
+        └── components
+        └── public
+```
+
+`apache` is pretty much the same, except now it accepts urls without 
+.php (currently the index doesn't work though so this needs sorting).
+
+`php` is exactly the same.
+
+`project` now maps to www/ rather than directly to html/ (now called 
+public/) so we can place files outside of public that are hidden 
+from the browser.
+
+`project/components` this will have javascript and html files for 
+fancy UI purposes that will be injected into the wrapper files in
+`/public`.
+
+`project/controller` php scripts to interact with the db and send back 
+whatever data we need. This will probably mirror the public folder but 
+will also most likely have some extra scripts in it as well.
+
+`project/public` is now what html/ used to be, a folder of views, 
+formatted in .php but rendered as html. These are fundamentally 
+wrappers for the `/components` files and will be used mainly for 
+pulling in dependencies and styles as well as defining the browser
+urls. 
+Note. the great thing about using PHP is there's an extra layer of 
+security because all PHP is rendered server-side and sent as HTML.
+
+`project/styles` for css. `/components` and `/public` will both mirror 
+their `project/` counterparts respectively. 
+
+
+Read below to review the original project set up...
+
+
 Containerize This: PHP/Apache/MySQL
 ===================================
 
