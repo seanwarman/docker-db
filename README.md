@@ -1,6 +1,6 @@
-# Changes
+### Changes
 
-I've changed this project to have the follwing structure...
+I've changed this project to have the following structure...
 
 ```
 /docker-db/
@@ -19,20 +19,20 @@ I've changed this project to have the follwing structure...
         └── public
 ```
 
-`apache` is pretty much the same, except now it accepts urls without 
+* `apache` is pretty much the same, except now it accepts urls without 
 .php (currently the index doesn't work though so this needs sorting).
 
-`php` is exactly the same.
+* `php` is exactly the same.
 
-`project` now maps to www/ rather than directly to html/ (now called 
+* `project` now maps to www/ rather than directly to html/ (now called 
 public/) so we can place files outside of public that are hidden 
 from the browser.
 
-`project/components` this will have javascript and html files for 
+* `project/components` this will have javascript and html files for 
 fancy UI purposes that will be injected into the wrapper files in
 `/public`.
 
-`project/controller` php scripts to interact with the db and send back 
+* `project/controller` php scripts to interact with the db and send back 
 whatever data we need. This will probably mirror the public folder but 
 will also most likely have some extra scripts in it as well. This 
 folder could contain a backend framework like Symfony in future,
@@ -40,7 +40,7 @@ although it's probably better practice to have a seperate container for
 that. I want to avoid using ajax requests to connect the front and
 backend for the moment.
 
-`project/public` is now what html/ used to be, a folder of views, 
+* `project/public` is now what html/ used to be, a folder of views, 
 formatted in .php but rendered as html. These are fundamentally 
 wrappers for the `/components` files and will be used mainly for 
 pulling in dependencies and styles as well as defining the browser
@@ -48,7 +48,7 @@ urls.
 Note. the great thing about using PHP is there's an extra layer of 
 security because all PHP is rendered server-side and sent as HTML.
 
-`project/styles` for css. `/components` and `/public` will both mirror 
+* `project/styles` for css. `/components` and `/public` will both mirror 
 their `project/` counterparts respectively. 
 
 
