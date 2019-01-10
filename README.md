@@ -13,10 +13,13 @@ I've changed this project to have the following structure...
 └── project
     └── components
     └── controller
-    └── public
-    └── styles
-        └── components
-        └── public
+    └── html
+    └── assets
+      └── fonts
+      └── img
+      └── styles
+          └── components
+          └── public
 ```
 
 * `apache` is pretty much the same, except now it accepts urls without 
@@ -40,17 +43,21 @@ although it's probably better practice to have a seperate container for
 that. I want to avoid using ajax requests to connect the front and
 backend for the moment.
 
-* `project/public` is now what html/ used to be, a folder of views, 
-formatted in .php but rendered as html. These are fundamentally 
-wrappers for the `/components` files and will be used mainly for 
-pulling in dependencies and styles as well as defining the browser
-urls. 
+* `project/html` a folder of views, formatted in .php. These are 
+fundamentally wrappers for the `/components` files and will be used 
+mainly for pulling in dependencies and styles as well as defining the 
+browser urls. 
 Note. the great thing about using PHP is there's an extra layer of 
 security because all PHP is rendered server-side and sent as HTML.
+Note note. if you decide to rename this folder to something more 
+relevent, remember that the apache container will create a html
+folder anyway so you'll have to prevent that.
 
-* `project/styles` for css. `/components` and `/public` will both mirror 
+* `project/assets` for css, images fonts etc. `styles/components` and `styles/public` will both mirror 
 their `project/` counterparts respectively. 
 
+I've moved the scope of the apache container so that we can access folders
+outside of public/ that the browser doesn't.
 
 Read below to review the original project set up...
 

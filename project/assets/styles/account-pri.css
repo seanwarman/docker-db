@@ -1,0 +1,188 @@
+  body {
+    margin: 0;
+  }
+  @font-face {
+    font-family: quickSand;
+    src:  url('./assets/fonts/Quicksand-Regular.ttf');
+  }
+  #acc-pri, h1, h2, h3, h4, h5, h6, p {
+    font-family: quickSand;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center; */
+    color: #2d2d2d;
+    height: 100%;
+    background-image: url('./assets/img/insights.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .account-prioritisation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 4rem;
+  }
+  .list {
+    height: 650px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    box-shadow: 5px 5px 8px #00000052;
+    padding: .5rem;
+    min-width: 330px;
+    margin-right: .5rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+  }
+  .chart {
+    height: 650px;
+    background-color: white;
+    box-shadow: 5px 5px 8px #00000052;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 0 .5rem 6rem .5rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    min-width: 330px; 
+    width: 100%;
+  }
+  .control-wrapper {
+    /* width: 100%; */
+    padding-right: 1rem;
+    padding-left: .5rem;
+    height: 650px;
+  }
+  .controls {
+    position: relative;
+    height: 650px;
+    display: none;
+  }
+  .controls input {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 266px;
+    left: -285px;
+    width: 567px;
+  }
+  .key-wrapper {
+    /*padding: 0.5rem;*/
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    transition: all 1s;
+    /*height: 284px;*/
+    width: 172px;
+    background-color: white;
+    box-shadow: 5px 5px 8px #00000052;
+  }
+  .key {
+    margin-bottom: .5rem;
+    /*margin-top: .5rem;*/
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    color: #2d2d2d;
+    height: 35px;
+    font-size: 0.9rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .key:hover {
+    cursor: pointer;
+  }
+  .color-block {
+    min-width: 5px;
+    height: 30px;
+    margin-left: 1rem;
+    border-radius: 5px;
+  }
+  .brand {
+    background-color: #2cd267;
+  }
+  .flesh-pink {
+    background-color: #ca5b5b;
+  }
+  .purple {
+    background-color: #7C56B7;
+  }
+  .blue {
+    background-color: #3b8ecc;
+  }
+  .mustard-yellow {
+    background-color: #ECCA44;
+  }
+  .blue-pastel {
+    background-color: #62C8BF;
+  }
+  .grey {
+    background-color: #2f2f2f;
+  }
+  .more-grey {
+    background-color: #272727;
+  }
+  .greyed-out {
+    color: #6b6b6b;
+  }
+  .light-grey {
+    background-color: #d2d2d2;
+  }
+  .bar-wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    position: relative;
+  }
+  .big-bar {
+    position: absolute;
+    width: 96px;
+    height: 100px;
+    transition: height 1s;
+  }
+  .divider {
+    width: 96px;
+    height: 2px;
+    position: absolute;
+    z-index: 0;
+    bottom: 50%;
+    transition: all 1s;
+  }
+  .account-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    transition: background-color 1s;
+    /*min-width: 192px;*/
+  }
+  .bar {
+    transition: all 1s;
+    min-width: 16px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .account {
+    position: absolute;
+    top: 558px;
+    font-size: 1rem;
+    width: 200px;
+    color: white;
+    width: 90px;
+  }
+  .big-bar:hover, .account:hover, .account-item:hover {
+    cursor: pointer;
+  }
+  .details {
+    position: absolute;
+    left: 114px;
+    font-size: .7em;
+    bottom: -14px;
+  }
+  .tag {
+    padding: .5rem;
+    color: white;
+    margin-top: -0.6rem;
+  }
